@@ -16,3 +16,8 @@ h3 { font-size: 14px; font-weight: 500; background: plum; width: fit-content; pa
 body { grid-template-columns: 1fr 2fr; }
 .life { display: none; }
 }
+@media screen and (max-width: 720px) {
+body { grid-template-columns: 1fr; }
+.life { display: none; }
+.me { border-right: none; border-bottom: 1px dotted #785F63; }
+}
