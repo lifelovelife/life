@@ -7,7 +7,7 @@ div::-webkit-scrollbar { display: none; }
 .me ul { margin: 0; padding: 0; }
 .me li { list-style-type: none; }
 .me li::before { content: "⁕ "; }
-.me a { color: inherit; }
+.me a { color: inherit; padding: 0; }
 .me a:hover { color: coral; }
 .work h3::before { content: "꩜ "; }
 .life img { width: 100%; position: relative; top: 140px; }
