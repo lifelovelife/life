@@ -6,9 +6,10 @@ div::-webkit-scrollbar { display: none; }
 .me span, .me li, .me a { width: fit-content; padding: 0 4px; word-break: break-all; }
 .me ul { margin: 0; padding: 0; }
 .me li { list-style-type: none; }
-.me li::marker { content: "⁕"; }
+.me li::before { content: "⁕ "; }
 .me a { color: inherit; }
 .me a:hover { color: coral; }
+.work h3::before { content: "꩜ "; }
 .life img { width: 100%; position: relative; top: 140px; }
 h2 { font-size: 16px; font-weight: 500; }
 h3 { font-size: 14px; font-weight: 500; background: plum; width: fit-content; padding: 0 4px; height: 21px; }
