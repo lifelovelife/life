@@ -9,10 +9,12 @@ div::-webkit-scrollbar { display: none; }
 .me li::before { content: "⁕ "; }
 .me a { color: inherit; }
 .me a:hover { color: coral; }
+.me .carita { writing-mode: vertical-lr; }
+.me .pie { position: absolute; bottom: 32px; font-family: cursive; }
 .work h3::before { content: "꩜ "; }
 .life img { width: 100%; position: relative; top: 140px; }
 h2 { font-size: 16px; font-weight: 500; }
-h3 { font-size: 14px; font-weight: 500; background: plum; width: fit-content; padding: 0 4px; height: 21px; }
+h3 { font-size: 14px; font-weight: 500; background: plum; width: fit-content; padding: 0 4px; height: 21px; margin-bottom: 4px; }
 @media screen and (max-width: 1024px) {
 body { grid-template-columns: 1fr 2fr; }
 .life { display: none; }
