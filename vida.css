@@ -81,13 +81,13 @@ main {
 }
 
 .tabla {
-    width: stretch;
+    width: 100%;
 }
 
 .tabla details summary, .tabla > div {
     border-top: 1px dotted lightsteelblue;
     padding: 8px 0;
-    width: stretch;
+    width: 100%;
 }
 
 .tabla details summary:hover {
@@ -154,5 +154,9 @@ summary::-webkit-details-marker {
 
     .informacion, .tabla, p, span, a, li, h1, h2, h3, h4, h5, h6 {
         max-height: 999999px !important;
+    }
+
+    main, .informacion {
+        position: static;
     }
 }
