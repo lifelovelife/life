@@ -44,6 +44,7 @@ header {
     padding: 8px;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
     gap: 4px;
 }
 
@@ -135,6 +136,17 @@ summary::-webkit-details-marker {
 
 .ee .lugar::before {
     color: orchid;
+}
+
+@media (max-width: 667px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .locacion {
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width: 900px) and (orientation: landscape) {
