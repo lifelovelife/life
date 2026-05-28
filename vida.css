@@ -74,9 +74,7 @@ header {
 }
 
 main {
-    display: flex;
     width: stretch;
-    flex-direction: column;
     position: absolute;
     bottom: 0;
     padding: 8px;
@@ -144,7 +142,7 @@ summary::-webkit-details-marker {
         float: none;
     }
 
-    .informacion {
+    main, .informacion {
         position: unset;
     }
 }
@@ -153,7 +151,7 @@ summary::-webkit-details-marker {
     body {
         font-size: 14px !important;
     }
-    
+
     .informacion, .tabla, p, span, a, li, h1, h2, h3, h4, h5, h6 {
         max-height: 999999px !important;
     }
