@@ -24,7 +24,7 @@ body {
     color: hsl(219, 80%, 26%);
     user-select: none;
     -webkit-user-select: none;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -156,9 +156,5 @@ summary::-webkit-details-marker {
 @media screen and (max-width: 900px) and (orientation: landscape) {
     body {
         font-size: 14px !important;
-    }
-
-    .informacion, .tabla, p, span, a, li, h1, h2, h3, h4, h5, h6 {
-        max-height: 999999px !important;
     }
 }
