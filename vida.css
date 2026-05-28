@@ -111,6 +111,10 @@ main {
     background: hsla(0, 0%, 100%, 0.8);
 }
 
+.tabla details summary:focus {
+    background: inherit;
+}
+
 details p {
     max-width: 68ch;
     margin: 0 0 16px 0;
