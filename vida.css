@@ -34,6 +34,12 @@ body:active {
     background-image: radial-gradient(hsla(54, 88%, 70%, 0.5), hsl(54, 64%, 96%));
 }
 
+.body:focus,
+.body:focus-visible {
+    background-image: initial;
+}
+
+
 .sol {
     color: hsl(54, 88%, 70%);
 }
