@@ -101,7 +101,7 @@ main {
 }
 
 details p {
-    max-width: 75ch;
+    max-width: 68ch;
     margin: 0 0 16px 0;
 }
 
@@ -142,7 +142,7 @@ summary::-webkit-details-marker {
         float: none;
     }
 
-    main, .informacion {
+    .informacion {
         position: static;
     }
 }
