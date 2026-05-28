@@ -72,10 +72,14 @@ main {
     padding: 8px;
 }
 
+.tabla {
+    width: stretch;
+}
+
 .tabla details summary, .tabla > div {
     border-top: 1px dotted lightsteelblue;
     padding: 8px 0;
-    width: 100%;
+    width: stretch;
 }
 
 .tabla details summary:hover {
