@@ -14,10 +14,10 @@
 
 html {
     cursor: grab;
-    -webkit-text-size-adjust: 100%;
 }
 
 body {
+    -webkit-text-size-adjust: 100% !important;
     font-variant-emoji: text;
     margin: 0;
     background: hsl(54, 64%, 96%);
@@ -27,6 +27,10 @@ body {
     color: hsl(219, 80%, 26%);
     user-select: none;
     -webkit-user-select: none;
+}
+
+.informacion, .tabla {
+    -webkit-text-size-adjust: 100% !important;
 }
 
 .sol {
