@@ -74,7 +74,7 @@ header {
 }
 
 main {
-    width: stretch;
+    width: calc(100vw - 16px);
     position: absolute;
     bottom: 0;
     padding: 8px;
