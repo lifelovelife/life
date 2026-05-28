@@ -90,9 +90,12 @@ main {
     justify-content: space-between;
 }
 
+.tabla details summary:hover {
+    cursor: pointer;
+}
+
 .tabla details:not([open]) summary:hover, .tabla .details:not([open]) summary:active {
     background: hsla(0, 0%, 100%, 0.8);
-    cursor: pointer;
 }
 
 details p {
@@ -145,7 +148,8 @@ summary::-webkit-details-marker {
     }
 
     .locacion {
-        margin-left: 0;
+        margin-left: 0 !important;
+        align-self: flex-start;
     }
 }
 
