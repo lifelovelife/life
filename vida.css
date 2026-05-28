@@ -90,9 +90,8 @@ main {
     width: 100%;
 }
 
-.tabla details summary:hover {
-    background: hsla(0, 0%, 100%, 0.3);
-    filter: blur(.5px);
+.tabla details:not([open]) summary:hover, tabla .details:not([open]) summary:active {
+    background: hsla(0, 0%, 100%, 0.4);
     cursor: pointer;
 }
 
