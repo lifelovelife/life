@@ -36,7 +36,7 @@ body:active {
 
 .body:focus,
 .body:focus-visible {
-    background-image: initial;
+    background-image: none;
 }
 
 
