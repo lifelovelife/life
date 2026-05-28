@@ -25,6 +25,7 @@ body {
     user-select: none;
     -webkit-user-select: none;
     height: 100vh;
+    max-height: 100vh;
     display: flex;
     flex-direction: column;
 }
