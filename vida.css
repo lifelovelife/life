@@ -109,6 +109,7 @@ summary::-webkit-details-marker {
 
 .lugar::before {
     content: "\23F9";
+    font-variant-emoji: text;
 }
 
 .cd .lugar::before {
