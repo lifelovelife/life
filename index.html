@@ -22,31 +22,31 @@
     <main>
         <section class="tabla">
             <details open name="experiencia" class="cd">
-                <summary><span class="lugar"> C2D</span> <span class="tiempo">2023 – Present</span></summary>
+                <summary onclick="pop()"><span class="lugar"> C2D</span> <span class="tiempo">2023 – Present</span></summary>
                 <p>
                     Solo product designer for C2D's Paradox Box [v3], a web application that analyzes and optimizes sets of revenue data.
                 </p>
             </details>
             <details name="experiencia" class="sh">
-                <summary><span class="lugar"> Soluntech</span> <span class="tiempo">2022 – 2023</span></summary>
+                <summary onclick="pop()"><span class="lugar"> Soluntech</span> <span class="tiempo">2022 – 2023</span></summary>
                 <p>
                     Ssr. UX/UI designer for multiple clients and Soluntech's projects ranging from sports, healthcare, tourism, education and more. I worked closely with the development team to align naming conventions, implement the use of design tokens and improve our collaboration on Figma.
                 </p>
             </details>
             <details name="experiencia" class="ph">
-                <summary><span class="lugar"> Pratech</span> <span class="tiempo">2021 – 2022</span></summary>
+                <summary onclick="pop()"><span class="lugar"> Pratech</span> <span class="tiempo">2021 – 2022</span></summary>
                 <p>
                     Mid-level UX/UI designer for multiple clients and Pratech's own products, including a virtual assistant and an online academy for Pratech's employees, where I created an online course about UX. Also helped build a <i>few</i> websites using React and CSS.
                 </p>
             </details>
             <details name="experiencia" class="dh">
-                <summary><span class="lugar"> Droomtech</span> <span class="tiempo">2020 – 2021</span></summary>
+                <summary onclick="pop()"><span class="lugar"> Droomtech</span> <span class="tiempo">2020 – 2021</span></summary>
                 <p>
                     Web designer for multiple clients and Droomtech's own projects ranging from e-commerce, fintech, Droomtech's client affiliate marketing website and more.
                 </p>
             </details>
             <details name="experiencia" class="ee">
-                <summary><span class="lugar"> E-ME</span> <span class="tiempo">2016 – 2020</span></summary>
+                <summary onclick="pop()"><span class="lugar"> E-ME</span> <span class="tiempo">2016 – 2020</span></summary>
                 <p>
                     UI and web designer for multiple clients ranging from e-commerce, health, construction and more. Also in charge of building websites using Wordpress, HTML and CSS.
                 </p>
@@ -57,13 +57,17 @@
         </section>
     </main>
 
+    <audio id="burbuja">
+        <source src="bubble.mp3" type="audio/mpeg">
+    </audio>
+
 <script>
     function updateBogotaTime() {
         const now = new Date();
 
         const hora = new Intl.DateTimeFormat("es-CO", {
             timeZone: "America/Bogota",
-            hour: "2-digit",
+            hour: "numeric",
             minute: "2-digit",
             hour12: false
         }).format(now);
@@ -83,6 +87,7 @@
     setInterval(updateBogotaTime, 1000);
     updateBogotaTime();
 
+
     const url = `https://api.open-meteo.com/v1/forecast?latitude=4.6097&longitude=-74.0817&current=temperature_2m,precipitation,wind_speed_10m&timezone=America/Bogota`;
 
     async function clima() {
@@ -97,7 +102,14 @@
         document.getElementById('temperatura').textContent = `${temperatura}${unidad}`;
     }
 
+    setInterval(clima, 600000);
     clima();
+
+
+    const click = document.getElementById("burbuja");
+    function pop() { 
+        click.play(); 
+    }
 </script>
 </body>
 </html>
