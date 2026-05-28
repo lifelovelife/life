@@ -41,6 +41,8 @@ body {
 }
 
 header {
+    position: fixed;
+    width: stretch;
     padding: 8px;
     display: flex;
     flex-wrap: wrap;
