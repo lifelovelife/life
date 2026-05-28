@@ -93,8 +93,12 @@ details p {
     margin: 0 0 16px 0;
 }
 
-summary::marker {
-    content: none;
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
 }
 
 .P .punto {
