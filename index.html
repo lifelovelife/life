@@ -1,60 +1,99 @@
 <!DOCTYPE html>
-<html lang ="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>nicolle</title>
-        <link rel="icon" type="image/png" href="orchid.png">
-        <link rel="stylesheet" href="life.css">
-    </head>
-    <body>
-        <div class="me">
-            <h2>Me</h2>
-            <div>
-                <h3 style="background: coral; margin-top: 0;">Nicolle Bustos</h3>
-                <ul>
-                    <li>Graphic designer <span class="carita">:-)</span></li>
-                    <li>Colombia <span class="carita">:-o</span></li>
-                    <li><a href="mailto:correodenicolle@gmail.com">correodenicolle@gmail.com</a> <span class="carita">:-p</span></li>
-                </ul>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="sol.png">
+    <title>Paisaje</title>
+    <link rel="stylesheet" href="vida.css">
+</head>
+<body>
+    <header>
+        <section class="informacion">
+            <span class="sol">⏹</span> <span class="cielo">Nicolle Bustos</span>
+            <span class="flor">Document designer 𖧧</span>
+        </section>
+        <section class="locacion derecha">
+            <span>Bogotá</span>
+            <span id="temperatura"></span>
+            <span id="reloj"></span>
+        </section>
+    </header>
+    <main>
+        <section class="tabla">
+            <details open name="experiencia" class="J">
+                <summary><span class="punto">⏹</span> C2D <span class="derecha">2023 - Present</span></summary>
+                <p>
+                    Solo product designer for C2D's Paradox Box [v3], a web application that analyzes and optimizes sets of revenue data.
+                </p>
+            </details>
+            <details name="experiencia" class="S">
+                <summary><span class="punto">⏹</span> Soluntech <span class=derecha>2022 - 2023</span></summary>
+                <p>
+                    Ssr. UX/UI designer for multiple clients and Soluntech's projects ranging from sports, healthcare, tourism, education and more. I worked closely with the development team to align naming conventions, implement the use of design tokens and improve our collaboration on Figma.
+                </p>
+            </details>
+            <details name="experiencia" class="I">
+                <summary><span class="punto">⏹</span> Pratech <span class=derecha>2021 - 2022</span></summary>
+                <p>
+                    Mid-level UX/UI designer for multiple clients and Pratech's own products, including a virtual assistant and an online academy for Pratech's employees, where I created an online course about UX. Also helped build a <i>few</i> websites using React and CSS.
+                </p>
+            </details>
+            <details name="experiencia" class="A">
+                <summary><span class="punto">⏹</span> Droomtech <span class=derecha>2020 - 2021</span></summary>
+                <p>
+                    Web designer for multiple clients and Droomtech's own projects ranging from e-commerce, fintech, Droomtech's client affiliate marketing website and more.
+                </p>
+            </details>
+            <details name="experiencia" class="P">
+                <summary><span class="punto">⏹</span> E-ME <span class=derecha>2016 - 2020</span></summary>
+                <p>
+                    UI and web designer for multiple clients ranging from e-commerce, health, construction and more. Also in charge of building websites using Wordpress, HTML and CSS.
+                </p>
+            </details>
+            <div class="comunicacion">
+                ○ For more information <span class="correo">correodenicolle@gmail.com</span> <span class="derecha">© Love Life</span>
             </div>
-            <div>
-                <h3 style="background: #91b3f2;">Education</h3>
-                <ul>
-                    <li>Form/Flow/Feel @ SFPC</li>
-                    <li>UX Research @ Coder House</li>
-                    <li>Bachelor's degree in Graphic Design</li>
-                </ul>
-            </div>
-            <div class="pie">
-                <span>© Love Life</span>
-            </div>
-        </div>
-        <div class="work">
-            <h2>Work</h2>
-            <div>
-                <h3>C2D Services, 2023 — Present</h3>
-                <p>Solo product designer for C2D's Paradox Box [v3], a web application that analyzes and optimizes sets of revenue data.</p>
-            </div>
-            <div>
-                <h3>Soluntech, 2022 — 2023</h3>
-                <p>Ssr. UX/UI designer for multiple clients and Soluntech's projects ranging from sports, healthcare, tourism, education and more. I worked closely with the development team to align naming conventions, implement the use of design tokens and improve our collaboration on Figma.</p>
-            </div>
-            <div>
-                <h3>Pratech, 2021 — 2022</h3>
-                <p>Mid-level UX/UI designer for multiple clients and Pratech's own products, including a virtual assistant and an online academy for Pratech's employees, where I created an online course about UX. Also helped build a <i>few</i> websites using React and CSS.</p>
-            </div>
-            <div>
-                <h3>Droomtech, 2020 — 2021</h3>
-                <p>Web designer for multiple clients and Droomtech's own projects ranging from e-commerce, fintech, Droomtech's client affiliate marketing website and more.</p>
-            </div>
-            <div>
-                <h3>E-me Growth Agency, 2016 — 2020</h3>
-                <p>UI and web designer for multiple clients ranging from e-commerce, health, construction and more. Also in charge of building websites using Wordpress, HTML and CSS.</p>
-            </div>
-        </div>
-        <div class="life">
-            <img src="melon.png">
-        </div>
-    </body>
+        </section>
+    </main>
+
+<script>
+    function updateBogotaTime() {
+        const now = new Date();
+
+        const bogota = now.toLocaleString("es-CO", {
+            timeZone: "America/Bogota",
+            day: 'numeric',
+            month: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false
+        }).replace(",", "");
+
+        document.getElementById('reloj').textContent = bogota;
+    }
+
+    setInterval(updateBogotaTime, 1000);
+    updateBogotaTime();
+
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=4.6097&longitude=-74.0817&current=temperature_2m,precipitation,wind_speed_10m&timezone=America/Bogota`;
+
+    async function obtenerClima() {
+        const respuesta = await fetch(url);
+        const datos = await respuesta.json();
+
+        console.log(datos);
+
+        const temperatura = datos.current.temperature_2m;
+        const unidad = datos.current_units.temperature_2m;
+
+        const precipitacion = datos.current.precipitation;
+        const viento = datos.current.wind_speed_10m;
+
+        document.getElementById('temperatura').textContent = `${temperatura}${unidad}`;
+    }
+
+    obtenerClima();
+</script>
+</body>
 </html>
