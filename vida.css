@@ -48,6 +48,7 @@ header {
     padding: 8px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .locacion {
@@ -132,9 +133,6 @@ summary::-webkit-details-marker {
     color: orchid;
 }
 
-@media screen and (max-width: 667px) {
-}
-
 @media screen and (max-width: 900px) and (orientation: landscape) {
     body {
         font-size: 14px !important;
@@ -142,9 +140,5 @@ summary::-webkit-details-marker {
 
     .informacion, .tabla, p, span, a, li, h1, h2, h3, h4, h5, h6 {
         max-height: 999999px !important;
-    }
-
-    main, .informacion {
-        position: static;
     }
 }
