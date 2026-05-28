@@ -16,7 +16,6 @@ html, body, * {
 
 body {
     -webkit-text-size-adjust: 100% !important;
-    font-variant-emoji: text;
     margin: 0;
     background: hsl(54, 64%, 96%);
     font-family: 'Tex Gyre Heros', sans-serif;
@@ -108,8 +107,7 @@ summary::-webkit-details-marker {
 }
 
 .lugar::before {
-    content: "\23F9";
-    font-variant-emoji: text;
+    content: "\23F9\FE0E";
 }
 
 .cd .lugar::before {
