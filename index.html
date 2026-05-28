@@ -12,6 +12,7 @@
         <section class="informacion">
             <span class="sol">&#x23F9;&#xFE0E;</span> <span class="cielo">Nicolle Bustos</span>
             <span class="flor">Document designer 𖧧</span>
+            <button popovertarget="yo" onclick="pop()">+</button>
         </section>
         <section class="locacion">
             <span>Bogotá</span>
@@ -19,6 +20,15 @@
             <span id="reloj"></span>
         </section>
     </header>
+<div id="yo" popover>
+    <div class="contenedor">
+        <img src="foto.png">
+        <div class="texto">
+            <span>b. 1997</span>
+            <span>Bachelor's degree in <b>Graphic Design</b>, 2016</span>
+        </div>
+    </div>
+</div>
     <main>
         <section class="tabla">
             <details open name="experiencia" class="cd">
@@ -58,7 +68,7 @@
     </main>
 
     <audio id="burbuja">
-        <source src="bubble.mp3" type="audio/mpeg">
+        <source src="burbuja.mp3" type="audio/mpeg">
     </audio>
 
 <script>
