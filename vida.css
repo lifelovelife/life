@@ -101,6 +101,10 @@ summary {
   list-style: none;
 }
 
+summary::marker {
+  content: "";
+}
+
 summary::-webkit-details-marker {
   display: none;
 }
