@@ -5,13 +5,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Tex Gyre Heros Cn';
-  src: url('fuentes/texgyreheroscn-regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
 html {
     cursor: grab;
 }
@@ -32,6 +25,9 @@ body {
     color: hsl(219, 80%, 26%);
     user-select: none;
     -webkit-user-select: none;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .informacion, .tabla {
@@ -51,10 +47,8 @@ body {
 
 header {
     padding: 8px;
-}
-
-.informacion {
-    position: absolute;
+    display: flex;
+    justify-content: space-between;
 }
 
 .locacion {
@@ -74,9 +68,8 @@ header {
 }
 
 main {
+    margin-top: auto;
     width: calc(100vw - 16px);
-    position: absolute;
-    bottom: 0;
     padding: 8px;
 }
 
@@ -88,15 +81,13 @@ main {
     border-top: 1px dotted lightsteelblue;
     padding: 8px 0;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
-.tabla details:not([open]) summary:hover, tabla .details:not([open]) summary:active {
+.tabla details:not([open]) summary:hover, .tabla .details:not([open]) summary:active {
     background: hsla(0, 0%, 100%, 0.8);
     cursor: pointer;
-}
-
-.derecha {
-    float: right;
 }
 
 details p {
@@ -116,34 +107,31 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-.P .punto {
-    color: orchid;
+.lugar::before {
+    content: "\23F9";
 }
 
-.A .punto {
-    color: hsl(219, 79%, 56%);
-}
-
-.I .punto {
-    color: indigo;
-}
-
-.S .punto {
-    color: sandybrown;
-}
-
-.J .punto {
+.cd .lugar::before {
     color: gray;
 }
 
-@media screen and (max-width: 667px) {
-    header .derecha {
-        float: none;
-    }
+.sh .lugar::before {
+    color: sandybrown;
+}
 
-    .informacion {
-        position: static;
-    }
+.ph .lugar::before {
+    color: indigo;
+}
+
+.dh .lugar::before {
+    color: hsl(219, 79%, 56%);
+}
+
+.ee .lugar::before {
+    color: orchid;
+}
+
+@media screen and (max-width: 667px) {
 }
 
 @media screen and (max-width: 900px) and (orientation: landscape) {
