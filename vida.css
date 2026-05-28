@@ -17,6 +17,7 @@ html {
 }
 
 body {
+    font-variant-emoji: text;
     margin: 0;
     background: hsl(54, 64%, 96%);
     font-family: 'Tex Gyre Heros', sans-serif;
@@ -47,6 +48,7 @@ header {
 }
 
 .locacion {
+    width: fit-content;
     padding: 2px 10px;
     background: hsla(54, 88%, 70%, 0.5);
     color: hsl(147, 50%, 42%);;
@@ -113,4 +115,18 @@ summary::marker {
 
 .J .punto {
     color: gray;
+}
+
+@media screen and (max-width: 667px) {
+    header .derecha, .comunicacion .derecha {
+        float: none;
+    }
+
+    .comunicacion {
+        display: grid;
+    }
+
+    .informacion {
+        position: unset;
+    }
 }
