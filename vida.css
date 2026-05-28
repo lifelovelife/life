@@ -108,6 +108,7 @@ summary::-webkit-details-marker {
 
 .lugar::before {
     content: "\23F9\FE0E";
+    font-family: 'Tex Gyre Heros', sans-serif;
 }
 
 .cd .lugar::before {
