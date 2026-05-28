@@ -80,7 +80,7 @@ main {
     padding: 8px;
 }
 
-.tabla {
+.tabla details, .tabla details:not([open]) {
     width: 100%;
 }
 
@@ -91,7 +91,7 @@ main {
 }
 
 .tabla details:not([open]) summary:hover, tabla .details:not([open]) summary:active {
-    background: hsla(0, 0%, 100%, 0.4);
+    background: hsla(0, 0%, 100%, 0.8);
     cursor: pointer;
 }
 
