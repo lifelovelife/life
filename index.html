@@ -61,16 +61,23 @@
     function updateBogotaTime() {
         const now = new Date();
 
-        const bogota = now.toLocaleString("es-CO", {
+        const hora = new Intl.DateTimeFormat("es-CO", {
             timeZone: "America/Bogota",
-            day: 'numeric',
-            month: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
+            hour: "2-digit",
+            minute: "2-digit",
             hour12: false
-        }).replace(",", "");
+        }).format(now);
 
-        document.getElementById('reloj').textContent = bogota;
+        const dia = new Intl.DateTimeFormat("es-CO", {
+            timeZone: "America/Bogota",
+            day: "numeric",
+            month: "numeric"
+        }).format(now);
+
+        const reloj = document.getElementById('reloj');
+        if (reloj) {
+            reloj.textContent = `${hora} ${dia}`;
+        }
     }
 
     setInterval(updateBogotaTime, 1000);
