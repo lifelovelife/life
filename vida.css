@@ -44,7 +44,6 @@ body {
 .sol {
     color: hsl(54, 88%, 70%);
 }
-
 .cielo {
     color: hsl(219, 79%, 56%);
 }
@@ -54,7 +53,7 @@ body {
 
 header {
     position: fixed;
-    width: stretch;
+    width: -webkit-fill-available;
     padding: 8px;
     display: flex;
     flex-wrap: wrap;
@@ -88,6 +87,49 @@ header {
 
 a:hover {
     text-decoration: underline wavy;
+}
+
+button {
+    background: hsla(0, 0%, 100%, 0.6);
+    border: 1px dotted lightsteelblue;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: hsl(0, 0%, 100%);
+}
+
+.informacion button {
+    aspect-ratio: 1;
+}
+
+div#yo {
+    color: hsl(219, 80%, 26%);
+    background: hsla(0, 0%, 100%, 0.8);
+    border: 1px dotted lightsteelblue;
+    padding: 16px;
+    margin-top: 28vh;
+}
+
+div#yo .contenedor {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+div#yo img {
+    border-radius: 24px;
+    width: 60px;
+}
+
+div#yo .texto {
+    display: grid;
+    margin: 0;
+}
+
+div#yo b {
+    color: hsl(302, 59%, 65%);
 }
 
 main {
