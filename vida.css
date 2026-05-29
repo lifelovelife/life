@@ -160,6 +160,11 @@ button:hover {
     margin: 0;
 }
 
+.construccion {
+    opacity:.6;
+    font-size:12px;
+}
+
 img {
     -webkit-user-drag: none;
 }
