@@ -16,9 +16,8 @@ html, body, * {
 
 body {
     -webkit-text-size-adjust: 100% !important;
+    background-color: hsl(54, 64%, 96%);
     margin: 0;
-    background: hsl(54, 64%, 96%) url(circulo.png);
-    background-position-y: -70px;
     font-family: 'Tex Gyre Heros', sans-serif;
     font-size: 14px;
     letter-spacing: .5px;
@@ -29,6 +28,18 @@ body {
     max-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: -60px; 
+    left: 0;
+    width: 102%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(circulo.png);
+    transform: rotate(-5deg);
     animation: nubes 70s linear infinite;
 }
 
@@ -78,7 +89,7 @@ header {
 }
 
 .comunicacion {
-    color: hsla(219, 80%, 26%, .5);
+    color: hsla(219, 80%, 26%, .6);
 }
 
 .comunicacion .correo {
@@ -91,6 +102,7 @@ a:hover {
 
 button {
     background: hsla(0, 0%, 100%, 0.6);
+    color: inherit;
     border: 1px dotted lightsteelblue;
     border-radius: 8px;
     cursor: pointer;
@@ -104,32 +116,33 @@ button:hover {
     aspect-ratio: 1;
 }
 
-div#yo {
-    color: hsl(219, 80%, 26%);
-    background: hsla(0, 0%, 100%, 0.8);
+:popover-open {
+    color: inherit;
+    background: hsla(0, 0%, 100%, 0.9);
     border: 1px dotted lightsteelblue;
     padding: 16px;
     margin-top: 28vh;
+    transform: rotate(2deg);
 }
 
-div#yo .contenedor {
+:popover-open:hover {
+    transform: rotate(0deg);
+}
+
+:popover-open .contenedor {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-div#yo img {
+:popover-open img {
     border-radius: 24px;
     width: 60px;
 }
 
-div#yo .texto {
+:popover-open .texto {
     display: grid;
     margin: 0;
-}
-
-div#yo b {
-    color: hsl(302, 59%, 65%);
 }
 
 main {
@@ -159,7 +172,7 @@ main {
     background: hsla(0, 0%, 100%, 0.6);
 }
 
-.tabla details:hover, .tabla .details:active {
+.tabla details:hover {
     background: hsla(0, 0%, 100%, 0.8);
 }
 
