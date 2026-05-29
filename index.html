@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="vida.css">
 </head>
 <body>
+    <div class="cursor"></div>
     <header>
         <section class="informacion">
             <span class="cielo sol"> Nicolle Bustos</span>
@@ -121,6 +122,23 @@
     function pop() { 
         click.play(); 
     }
+
+
+    document.addEventListener("mousemove", (e) => {
+        const container = document.querySelector(".cursor");
+        const dot = document.createElement("div");
+        
+        dot.classList.add("rastro");
+        
+        dot.style.left = `${e.clientX}px`;
+        dot.style.top = `${e.clientY}px`;
+        
+        container.appendChild(dot);
+        
+        setTimeout(() => {
+            dot.remove();
+        }, 600); 
+    });
 </script>
 </body>
 </html>
