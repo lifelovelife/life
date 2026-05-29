@@ -40,7 +40,7 @@ body::before {
     height: 100%;
     z-index: -1;
     background-image: url(circulo.png);
-    background-size: 102%
+    background-size: 102%;
     transform: rotate(-5deg);
     animation: nubes 70s linear infinite;
 }
