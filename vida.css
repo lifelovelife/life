@@ -189,7 +189,7 @@ main {
 }
 
 .tabla details:hover, .tabla details[open] {
-    background-image: linear-gradient(to right, hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0.2));
+    background-image: linear-gradient(to right, hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0.2)) !important;
 }
 
 .tiempo {
