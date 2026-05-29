@@ -170,7 +170,7 @@ main {
 }
 
 .tabla details:hover {
-    background: hsla(0, 0%, 100%, 0.8);
+    background-image: linear-gradient(to right, hsl(54, 64%, 96%), hsla(0, 0%, 100%, 0.8), hsl(54, 64%, 96%));
 }
 
 .tiempo {
