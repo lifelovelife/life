@@ -12,6 +12,7 @@ html {
 html, body, * {
   -webkit-text-size-adjust: 100% !important;
   text-size-adjust: 100% !important;
+  overflow-x: hidden;
 }
 
 body {
@@ -28,19 +29,17 @@ body {
     max-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow-x: clip;
 }
 
 body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: -60px; 
     left: 0;
-    width: 100%;
+    width: 102%;
     height: 100%;
     z-index: -1;
     background-image: url(circulo.png);
-    background-size: 102%;
     transform: rotate(-5deg);
     animation: nubes 70s linear infinite;
 }
