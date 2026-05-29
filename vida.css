@@ -1,18 +1,15 @@
 @font-face {
-  font-family: 'Tex Gyre Heros';
-  src: url('fuentes/texgyreheros-regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-html {
-    cursor: grab;
+    font-family: 'Tex Gyre Heros';
+    src: url('fuentes/texgyreheros-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
 html, body, * {
-  -webkit-text-size-adjust: 100% !important;
-  text-size-adjust: 100% !important;
-  overflow-x: hidden;
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+    overflow-x: hidden;
+    cursor: grab;
 }
 
 body {
@@ -24,7 +21,9 @@ body {
     letter-spacing: .5px;
     color: hsl(219, 80%, 26%);
     user-select: none;
+    -moz-user-select: none;
     -webkit-user-select: none;
+    -ms-user-select: none;
     height: 100vh;
     max-height: 100vh;
     display: flex;
@@ -36,12 +35,12 @@ body::before {
     position: fixed;
     top: -60px; 
     left: 0;
-    width: 102%;
-    height: 100%;
+    width: 110%;
+    height: 110%;
     z-index: -1;
     background-image: url(circulo.png);
     transform: rotate(-5deg);
-    animation: nubes 70s linear infinite;
+    animation: nubes 60s linear infinite;
 }
 
 @keyframes nubes {
@@ -53,9 +52,25 @@ body::before {
     }
 }
 
-.sol {
-    color: hsl(54, 88%, 70%);
+@keyframes sol {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
+
+.sol::before {
+    color: hsl(54, 88%, 70%);
+    animation: sol 1.25s infinite steps(1);
+}
+
 .cielo {
     color: hsl(219, 79%, 56%);
 }
@@ -146,6 +161,10 @@ button:hover {
     margin: 0;
 }
 
+img {
+    -webkit-user-drag: none;
+}
+
 main {
     margin-top: auto;
     width: calc(100vw - 16px);
@@ -169,7 +188,7 @@ main {
     cursor: pointer;
 }
 
-.tabla details:hover, .tabla details:open {
+.tabla details:hover, .tabla details[open] {
     background-image: linear-gradient(to right, hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0.2));
 }
 
@@ -185,18 +204,18 @@ details p {
 }
 
 summary {
-  list-style: none;
+    list-style: none;
 }
 
 summary::marker {
-  content: "";
+    content: "";
 }
 
 summary::-webkit-details-marker {
-  display: none;
+    display: none;
 }
 
-.lugar::before {
+.lugar::before, .sol::before {
     content: "\23F9\FE0E";
     font-family: 'Tex Gyre Heros', sans-serif;
     font-variant-emoji: text;
