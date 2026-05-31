@@ -153,7 +153,12 @@ button:hover {
     aspect-ratio: 1;
 }
 
-:popover-open {
+[popover] {
+  display: none;
+}
+
+[popover]:popover-open {
+    display: block;
     color: inherit;
     background: hsla(0, 0%, 100%, .9);
     border: 1px dotted lightsteelblue;
@@ -162,22 +167,22 @@ button:hover {
     transform: rotate(2deg);
 }
 
-:popover-open:hover {
+[popover]:popover-open:hover {
     transform: rotate(0deg);
 }
 
-:popover-open .contenedor {
+[popover]:popover-open .contenedor {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-:popover-open img {
+[popover]:popover-open img {
     border-radius: 24px;
     width: 60px;
 }
 
-:popover-open .texto {
+[popover]:popover-open .texto {
     display: grid;
     margin: 0;
 }
