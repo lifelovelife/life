@@ -23,7 +23,7 @@
     filter: drop-shadow(0 0 8px hsl(54, 64%, 96%));
   }
   100% {
-    transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(.5);
     opacity: 0;
   }
 }
@@ -88,6 +88,7 @@ body::before {
 }
 
 .sol::before {
+    color: hsl(54, 88%, 70%);
     animation: sol 1.25s infinite steps(1);
 }
 
